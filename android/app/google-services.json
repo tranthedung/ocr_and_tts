@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "491587759792",
+    "project_id": "ocr-and-tts",
+    "storage_bucket": "ocr-and-tts.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:491587759792:android:9220eb92a022732dc45575",
+        "android_client_info": {
+          "package_name": "com.example.ocr_and_tts"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_14a3W8O9m31KNB5vWnNWiw7LDjx_M6Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
