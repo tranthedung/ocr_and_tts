@@ -7,9 +7,8 @@ class FireBaseUserRepo implements UserRepository {
   final FirebaseAuth _firebaseAuth;
   final userCollection = FirebaseFirestore.instance.collection('users');
 
-  FireBaseUserRepo({
-    FirebaseAuth? firebaseAuth,
-  }) : _firebaseAuth = firebaseAuth ?? FirebaseAuth.instance;
+  FireBaseUserRepo({FirebaseAuth? firebaseAuth})
+      : _firebaseAuth = firebaseAuth ?? FirebaseAuth.instance;
 
   @override
   Stream<User?> get user {

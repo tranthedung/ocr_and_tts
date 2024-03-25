@@ -15,26 +15,18 @@ class AuthenticationBloc
 
   AuthenticationBloc({
     required this.userRepository,
-  }) : super(
-          const AuthenticationState.unknown(),
-        ) {
+  }) : super(const AuthenticationState.unknown()) {
     _userSubscription = userRepository.user.listen(
       (user) {
-        add(
-          AuthenticationUserChanged(user: user),
-        );
+        add(AuthenticationUserChanged(user: user));
       },
     );
     on<AuthenticationUserChanged>(
       (event, emit) {
         if (event.user != null) {
-          emit(
-            AuthenticationState.authenticated(event.user!),
-          );
+          emit(AuthenticationState.authenticated(event.user!));
         } else {
-          emit(
-            const AuthenticationState.unauthenticated(),
-          );
+          emit(const AuthenticationState.unauthenticated());
         }
       },
     );
